@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PVideoGamesAPI</name>
+    </assembly>
+    <members>
+        <member name="M:PVideoGamesAPI.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Devuelve todas las categirias que existen en la base de datos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.CategoriesController.GetCategory(System.Int32)">
+            <summary>
+            Devuelve una categoria en especifico mediante el Id que es solicitado en los parametros.
+            </summary>
+            <param name="IdCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.CategoriesController.CreateCategory(PVideoGamesAPI.Models.Dtos.CategoryDto)">
+            <summary>
+            Permite crear una categoria en la base de datos.
+            </summary>
+            <param name="categoryDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.CategoriesController.UpdateCategory(PVideoGamesAPI.Models.Dtos.CategoryDto,System.Int32)">
+            <summary>
+            Este nos permite editar una categoria mediante el id solicitado.
+            </summary>
+            <param name="categoryDto"></param>
+            <param name="IdCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.CategoriesController.DeleteCategory(System.Int32)">
+            <summary>
+            Este permite eliminar una categoria, con el id que se pide en los parametros.
+            </summary>
+            <param name="IdCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.RequirementsController.GetRequirements">
+            <summary>
+            Obten todos los "Requerimientos" que necesita el video juego que quieres.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.RequirementsController.GetRequirements(System.Int32)">
+            <summary>
+            Busca un requerimiento en especifico, mediante un id.
+            </summary>
+            <param name="IdRequirements"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.RequirementsController.CreateRequirements(PVideoGamesAPI.Models.Tables_Complements.Complements_Dtos.RequirementsDto)">
+            <summary>
+            Sirve para crear un requerimiento.
+            </summary>
+            <param name="requirementsDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.RequirementsController.UpdateRequirements(PVideoGamesAPI.Models.Tables_Complements.Complements_Dtos.RequirementsDto,System.Int32)">
+            <summary>
+            Sirve para actualizar un requerimiento.
+            </summary>
+            <param name="requirementsDto"></param>
+            <param name="IdRequirements"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.RequirementsController.DeleteRequirements(System.Int32)">
+            <summary>
+            Eliminar un requerimiento, mediante un id.
+            </summary>
+            <param name="IdRequirements"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.GetUsers">
+            <summary>
+            Devuelve todos los usario que hay en la base de datos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Devuelve en especifico un usuario mediante el Id.
+            </summary>
+            <param name="IdUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.Login(PVideoGamesAPI.Models.Dtos.UserLoginDto)">
+            <summary>
+            Se necesita tanto el nombre del usuario como la contraseña para devolver el token de entrada a la app.
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.RegisterUser(PVideoGamesAPI.Models.Dtos.UserRegisterDto)">
+            <summary>
+            Permite registrar a nuevos usuarios en la base de datos.
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.UpdateUser(PVideoGamesAPI.Models.Dtos.UserDto,System.Int32)">
+            <summary>
+            Este nos permite editar los usuarios creados.
+            </summary>
+            <param name="userDto"></param>
+            <param name="IdUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Permite elimianar los usarios mediante el Id requerido en los parametros.
+            </summary>
+            <param name="IdUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.GetVideoGames">
+            <summary>
+            Nos devuelve todos los video juegos que han sido creado en la bases de dato junto con su categoria
+            y requirimientos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.GetVideoGame(System.Int32)">
+            <summary>
+            Este solamente nos devuelve un video juego en especifico (mediante el paramentro solicitado), al
+            igual que la otra funcio este lo devuelve con su categoria y requerimientos.
+            </summary>
+            <param name="IdVideoGame"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.GetVideoGameInCate(System.Int32)">
+            <summary>
+            Esta funcion se encarga de devolvernos todas los videojuegos que se encuetren en la categoria especificada.
+            </summary>
+            <param name="IdCategoria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.FindVideoGames(System.String)">
+            <summary>
+            Usa este metodo requiere de una palabra clave para encontrar resultados, ejemplo si estas queriendo
+            encontrar el videojuego de batman con solo poner b aparecera, o sino recuerdas el nombre con alguna palabra
+            que pongas de la descripcion es suficiente.
+            </summary>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.CreateVideoGame(PVideoGamesAPI.Models.Dtos.VideoGameCreateDto)">
+            <summary>
+            Para poder crear un video juego este necesita previamente que se le haya creado sus requerimientos
+            o de estar ya creado asignarlo en espacio correspondiente esto aplica tambie para el apartado de categoria.
+            </summary>
+            <param name="videogameDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.UpdateVideoGame(PVideoGamesAPI.Models.Dtos.VideoGameUpdateDto,System.Int32)">
+            <summary>
+            Actualiza el videojuego, este necesita que le pasen por parametro el id del juego que desea editar...
+            </summary>
+            <param name="videogameDto"></param>
+            <param name="IdVideoGame"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PVideoGamesAPI.Controllers.VideoGamesController.DeleteVideoGame(System.Int32)">
+            <summary>
+            Elimina el juego, solo necesita el id.
+            </summary>
+            <param name="IdVideoGame"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
