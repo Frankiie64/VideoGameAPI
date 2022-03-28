@@ -27,10 +27,7 @@ namespace PVideoGamesAPI.Controllers
             _mapper = mapper;
         }
    
-        /// <summary>
-        /// Obten todos los "Requerimientos" que necesita el video juego que quieres.
-        /// </summary>
-        /// <returns></returns>
+
         [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<RequirementsDto>))]
@@ -47,11 +44,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(listDto);
         }
-        /// <summary>
-        /// Busca un requerimiento en especifico, mediante un id.
-        /// </summary>
-        /// <param name="IdRequirements"></param>
-        /// <returns></returns>
+
         [AllowAnonymous]
         [HttpGet("{IdRequirements:int}", Name = "GetRequirements")]
         [ProducesResponseType(200, Type = typeof(List<RequirementsDto>))]
@@ -70,11 +63,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(requirementsDto);
         }
-        /// <summary>
-        /// Sirve para crear un requerimiento.
-        /// </summary>
-        /// <param name="requirementsDto"></param>
-        /// <returns></returns>
+
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(List<RequirementsCreateDto>))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -108,12 +97,7 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetRequirements", new { IdRequirements = item.Id }, item);
         }
-        /// <summary>
-        /// Sirve para actualizar un requerimiento.
-        /// </summary>
-        /// <param name="requirementsDto"></param>
-        /// <param name="IdRequirements"></param>
-        /// <returns></returns>
+        
         [HttpPatch("{IdRequirements:int}", Name = "UpdateRequirements")]
         [ProducesResponseType(204, Type = typeof(List<RequirementsDto>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -152,11 +136,7 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetRequirements", new { IdRequirements = requirements.Id }, requirements);
         }
-        /// <summary>
-        /// Eliminar un requerimiento, mediante un id.
-        /// </summary>
-        /// <param name="IdRequirements"></param>
-        /// <returns></returns>
+
         [HttpDelete("{IdRequirements:int}", Name = "DeleteRequirements")]
         [ProducesResponseType(200, Type = typeof(List<RequirementsDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

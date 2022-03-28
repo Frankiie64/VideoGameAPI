@@ -32,11 +32,6 @@ namespace PVideoGamesAPI.Controllers
             _Hosting = Hosting;
             _mapper = mapper;
         }
-        /// <summary>
-        /// Nos devuelve todos los video juegos que han sido creado en la bases de dato junto con su categoria
-        /// y requirimientos.
-        /// </summary>
-        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<VideoGameDto>))]
@@ -58,13 +53,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(listDto);
 
-        }
-        /// <summary>
-        /// Este solamente nos devuelve un video juego en especifico (mediante el paramentro solicitado), al
-        /// igual que la otra funcio este lo devuelve con su categoria y requerimientos.
-        /// </summary>
-        /// <param name="IdVideoGame"></param>
-        /// <returns></returns>
+        }     
         [AllowAnonymous]
         [HttpGet("{IdVideoGame:int}", Name = "GetVideoGame")]
         [ProducesResponseType(200, Type = typeof(List<VideoGameDto>))]
@@ -86,11 +75,6 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(videogameDto);
         }
-        /// <summary>
-        /// Esta funcion se encarga de devolvernos todas los videojuegos que se encuetren en la categoria especificada.
-        /// </summary>
-        /// <param name="IdCategoria"></param>
-        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("GetVideoGameInCate/{IdCategoria:int}")]
         [ProducesResponseType(200, Type = typeof(List<VideoGameDto>))]
@@ -115,13 +99,6 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(ListvideoGameDto);
         }
-        /// <summary>
-        /// Usa este metodo requiere de una palabra clave para encontrar resultados, ejemplo si estas queriendo
-        /// encontrar el videojuego de batman con solo poner b aparecera, o sino recuerdas el nombre con alguna palabra
-        /// que pongas de la descripcion es suficiente.
-        /// </summary>
-        /// <param name="keyword"></param>
-        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("FindVideoGames")]
         [ProducesResponseType(200, Type = typeof(List<VideoGameDto>))]
@@ -145,12 +122,6 @@ namespace PVideoGamesAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error recuperando datos de la aplicacion");
             }
         }
-        /// <summary>
-        /// Para poder crear un video juego este necesita previamente que se le haya creado sus requerimientos
-        /// o de estar ya creado asignarlo en espacio correspondiente esto aplica tambie para el apartado de categoria.
-        /// </summary>
-        /// <param name="videogameDto"></param>
-        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(List<VideoGameCreateDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -211,13 +182,7 @@ namespace PVideoGamesAPI.Controllers
                 ModelState.AddModelError("", $"Ha pasado algo con la base de datos, por favor comuniquese con servicio tecnico, {ex}");
                 return StatusCode(500, ModelState);
             }
-        }
-        /// <summary>
-        /// Actualiza el videojuego, este necesita que le pasen por parametro el id del juego que desea editar...
-        /// </summary>
-        /// <param name="videogameDto"></param>
-        /// <param name="IdVideoGame"></param>
-        /// <returns></returns>
+        }        
         [HttpPatch("{IdVideoGame:int}", Name = "UpdateVideoGame")]
         [ProducesResponseType(204, Type = typeof(List<VideoGameUpdateDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -273,11 +238,6 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetVideoGame", new { IdVideoGame = videogame.Id }, videogame);
         }
-        /// <summary>
-        /// Elimina el juego, solo necesita el id.
-        /// </summary>
-        /// <param name="IdVideoGame"></param>
-        /// <returns></returns>
         [HttpDelete("{IdVideoGame:int}", Name = "DeleteVideoGame")]
         [ProducesResponseType(200, Type = typeof(List<VideoGameDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

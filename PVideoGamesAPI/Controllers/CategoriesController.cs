@@ -28,10 +28,7 @@ namespace PVideoGamesAPI.Controllers
             _repo = repo;
             _mapper = mapper;
         }
-        /// <summary>
-        /// Devuelve todas las categirias que existen en la base de datos.
-        /// </summary>
-        /// <returns></returns>
+   
         [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<CategoryDto>))]
@@ -48,11 +45,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(listDto);
         }
-        /// <summary>
-        /// Devuelve una categoria en especifico mediante el Id que es solicitado en los parametros.
-        /// </summary>
-        /// <param name="IdCategory"></param>
-        /// <returns></returns>
+
         [AllowAnonymous]
         [HttpGet("{IdCategory:int}", Name = "GetCategory")]
         [ProducesResponseType(200, Type = typeof(List<CategoryDto>))]
@@ -71,11 +64,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(categoryDto);
         }
-        /// <summary>
-        /// Permite crear una categoria en la base de datos.
-        /// </summary>
-        /// <param name="categoryDto"></param>
-        /// <returns></returns>
+
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(List<CategoryDto>))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -110,12 +99,7 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetCategory", new { IdCategory = item.Id }, item);
         }
-        /// <summary>
-        /// Este nos permite editar una categoria mediante el id solicitado.
-        /// </summary>
-        /// <param name="categoryDto"></param>
-        /// <param name="IdCategory"></param>
-        /// <returns></returns>
+
         [HttpPatch("{IdCategory:int}", Name = "UpdateCategory")]
         [ProducesResponseType(204, Type = typeof(List<CategoryDto>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -154,11 +138,7 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetCategory", new { IdCategory = category.Id }, category);
         }
-        /// <summary>
-        /// Este permite eliminar una categoria, con el id que se pide en los parametros.
-        /// </summary>
-        /// <param name="IdCategory"></param>
-        /// <returns></returns>
+
         [HttpDelete("{IdCategory:int}", Name = "DeleteCategory")]
         [ProducesResponseType(200, Type = typeof(List<CategoryDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

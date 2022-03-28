@@ -1,6 +1,9 @@
+using CarsAPI.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -183,7 +187,39 @@ namespace PVideoGamesAPI
 
                 });
 
+
             }
+            else
+            {
+                app.UseExceptionHandler(builder => {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+
+                        if (error != null)
+                        {
+                            context.Response.AddAplicationError(error.Error.Message);
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+
+                    });
+                });
+
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/APIVideoGame/swagger.json", "API Video Games v1");
+                    c.SwaggerEndpoint("/swagger/APICategory/swagger.json", "API Category v1");
+                    c.SwaggerEndpoint("/swagger/APIRequeriments/swagger.json", "API Requerimientos v1");
+                    c.SwaggerEndpoint("/swagger/APIUsers/swagger.json", "API Users v1");
+
+                    c.RoutePrefix = "";
+                });
+
+            }
+
+
 
             app.UseHttpsRedirection();
 
@@ -199,6 +235,7 @@ namespace PVideoGamesAPI
             });
 
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
         }
     }
 }

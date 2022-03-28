@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnu/T0rHiIkCzxi3WNTpN8gAAAAACAAAAAAAQZgAAAAEAACAAAAAzb5XO5H9pLWEVznBQukbYGIaAIDVCcJvGpiMk54/lCwAAAAAOgAAAAAIAACAAAADXWVGYfRP9fiFpmf78zCnQz1U/eMP9k27Ln2rJ2TfyUSAAAADkytcYBIvoLc0/iGdqvXNZrevXz4I88YWgh8sgmSlKkEAAAADw6TbYQ0Cyw9AzXaBGEQmjwwbo2yFlCKW+w1M1nyW0xMbcwZxK5lhUMzJZiP3BIx5k8OaWRcQ8VP3Kb4g0heMj</EncryptedPassword>
+    <_PublishTargetUrl>C:\Users\Franklyn\Desktop\ApiVideoGames</_PublishTargetUrl>
+    <History>True|2022-03-28T20:30:48.6383996Z;True|2022-03-28T16:21:45.4901773-04:00;True|2022-03-27T14:42:38.4056486-04:00;True|2022-03-26T19:26:49.9203948-04:00;True|2022-03-26T19:20:26.7419424-04:00;True|2022-03-26T15:13:28.7852536-04:00;True|2022-03-26T15:07:13.2721764-04:00;True|2022-03-26T15:01:51.4192661-04:00;True|2022-03-26T14:18:58.2927970-04:00;False|2022-03-26T14:13:16.1876130-04:00;True|2022-03-26T13:27:45.3911878-04:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>02/20/2022 22:25:00</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>03/26/2022 14:05:21</publishTime>
+    </File>
+    <File Include="appsettings.production.json">
+      <publishTime>03/27/2022 14:20:48</publishTime>
+    </File>
+    <File Include="AutoMapper.dll">
+      <publishTime>02/04/2022 11:28:52</publishTime>
+    </File>
+    <File Include="AutoMapper.Extensions.Microsoft.DependencyInjection.dll">
+      <publishTime>01/05/2022 11:57:34</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
+      <publishTime>01/13/2022 23:00:24</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>08/25/2020 19:24:48</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>12/15/2021 06:00:02</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>12/15/2021 06:00:20</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>12/15/2021 06:00:32</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>12/15/2021 06:00:38</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>10/22/2021 19:48:30</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>06/15/2021 15:12:46</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>10/22/2021 19:50:00</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>10/22/2021 19:50:40</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>05/18/2020 16:11:54</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>06/29/2020 21:04:58</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>06/29/2020 21:05:58</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>06/29/2020 21:06:48</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>06/29/2020 21:13:54</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>06/29/2020 21:09:50</publishTime>
+    </File>
+    <File Include="Microsoft.OpenApi.dll">
+      <publishTime>08/29/2020 16:14:12</publishTime>
+    </File>
+    <File Include="PVideoGamesAPI.deps.json">
+      <publishTime>03/27/2022 14:20:46</publishTime>
+    </File>
+    <File Include="PVideoGamesAPI.dll">
+      <publishTime>03/27/2022 14:19:57</publishTime>
+    </File>
+    <File Include="PVideoGamesAPI.exe">
+      <publishTime>03/27/2022 14:19:57</publishTime>
+    </File>
+    <File Include="PVideoGamesAPI.pdb">
+      <publishTime>03/27/2022 14:19:57</publishTime>
+    </File>
+    <File Include="PVideoGamesAPI.runtimeconfig.json">
+      <publishTime>03/26/2022 11:01:02</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>08/25/2020 19:25:12</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>08/25/2020 16:34:56</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb">
+      <publishTime>08/25/2020 16:31:56</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>08/25/2020 16:35:06</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb">
+      <publishTime>08/25/2020 16:31:56</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>08/25/2020 16:34:56</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb">
+      <publishTime>08/25/2020 16:31:56</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>08/25/2020 16:34:56</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb">
+      <publishTime>08/25/2020 16:31:56</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>08/25/2020 19:24:48</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 04:53:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 04:53:46</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>09/23/2020 08:47:20</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
+      <publishTime>09/23/2020 08:47:22</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
+      <publishTime>09/23/2020 08:47:24</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/15/2019 04:37:04</publishTime>
+    </File>
+    <File Include="System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>12/11/2020 22:40:42</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>06/29/2020 21:03:46</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 04:37:36</publishTime>
+    </File>
+    <File Include="System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>10/22/2021 19:40:56</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 04:37:42</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>03/27/2022 14:20:47</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/1a38b756-3203-44f8-b05b-fb45a589a780.jpeg">
+      <publishTime>02/24/2022 15:01:11</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/1a9f90fb-1947-4ade-b3d7-d6b85e83a3fd.jpeg">
+      <publishTime>02/24/2022 19:39:25</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/4fda039f-a566-4ad4-8a9c-2c80a9fb2bd3.jpeg">
+      <publishTime>02/24/2022 14:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/b0fb9ca8-b56d-4a54-8590-ad2b2b36d594.jpg">
+      <publishTime>02/24/2022 13:31:09</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/b6ecaa23-87f9-4ae3-89a5-e90268921750.jpeg">
+      <publishTime>02/26/2022 12:55:49</publishTime>
+    </File>
+    <File Include="wwwroot/Photos/f3d13d7e-420f-490e-9a0d-63da54ee93c3.jpg">
+      <publishTime>02/24/2022 13:33:09</publishTime>
+    </File>
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>workstation id=videoGameDataBase.mssql.somee.com%3bpacket size=4096%3buser id=Angel18_SQLLogin_1%3bpwd=mubm7xhnly%3bdata source=videoGameDataBase.mssql.somee.com%3bpersist security info=False%3binitial catalog=videoGameDataBase</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

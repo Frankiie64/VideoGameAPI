@@ -35,10 +35,7 @@ namespace PVideoGamesAPI.Controllers
             _mapper = mapper;
             _config = config;
         }
-        /// <summary>
-        /// Devuelve todos los usario que hay en la base de datos.
-        /// </summary>
-        /// <returns></returns>
+
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<UserDto>))]
         [ProducesResponseType(400)]
@@ -54,11 +51,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(listDto);
         }
-        /// <summary>
-        /// Devuelve en especifico un usuario mediante el Id.
-        /// </summary>
-        /// <param name="IdUser"></param>
-        /// <returns></returns>
+
         [HttpGet("{IdUser:int}", Name = "GetUser")]
         [ProducesResponseType(200, Type = typeof(List<UserDto>))]
         [ProducesResponseType(404)]
@@ -76,11 +69,7 @@ namespace PVideoGamesAPI.Controllers
 
             return Ok(userDto);
         }
-        /// <summary>
-        /// Se necesita tanto el nombre del usuario como la contraseña para devolver el token de entrada a la app.
-        /// </summary>
-        /// <param name="userDto"></param>
-        /// <returns></returns>
+
         [AllowAnonymous]
         [HttpPost("Login")]
         [ProducesResponseType(202, Type = typeof(List<UserLoginDto>))]
@@ -122,11 +111,7 @@ namespace PVideoGamesAPI.Controllers
                 token = TokenHandler.WriteToken(token)
             });
         }
-        /// <summary>
-        /// Permite registrar a nuevos usuarios en la base de datos.
-        /// </summary>
-        /// <param name="userDto"></param>
-        /// <returns></returns>
+
         [AllowAnonymous]
         [HttpPost("Registro")]
         [ProducesResponseType(201, Type = typeof(List<UserRegisterDto>))]
@@ -159,12 +144,7 @@ namespace PVideoGamesAPI.Controllers
             }
             return Ok(userDto);
         }
-        /// <summary>
-        /// Este nos permite editar los usuarios creados.
-        /// </summary>
-        /// <param name="userDto"></param>
-        /// <param name="IdUser"></param>
-        /// <returns></returns>
+
         [HttpPatch("{IdUser:int}", Name = "UpdateUser")]
         [ProducesResponseType(204, Type = typeof(List<UserDto>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -203,11 +183,7 @@ namespace PVideoGamesAPI.Controllers
 
             return CreatedAtRoute("GetUser", new { IdUser = userDto.Id }, userDto);
         }
-        /// <summary>
-        /// Permite elimianar los usarios mediante el Id requerido en los parametros.
-        /// </summary>
-        /// <param name="IdUser"></param>
-        /// <returns></returns>
+
         [HttpDelete("{IdUser:int}", Name = "DeleteUser")]
         [ProducesResponseType(200, Type = typeof(List<UserDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
